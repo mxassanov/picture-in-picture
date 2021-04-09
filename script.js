@@ -1,7 +1,7 @@
 const videoElem = document.getElementById('video')
 const btn = document.getElementById('button')
 
-//выбор потока, переход к видео и просмотру
+// Выбор потока, переход к видео и просмотру
 async function selectMediaStream() {
   try {
     const mediaStream = await navigator.mediaDevices.getDisplayMedia()
@@ -16,7 +16,7 @@ async function selectMediaStream() {
 
 btn.addEventListener('click', async () => {
   btn.disabled = true
-  //старт картинки в картинке
+  // Старт картинки в картинке
   await videoElem.requestPictureInPicture()
   btn.disabled = false
 })
